@@ -42,7 +42,7 @@ public class MaintenanceRequestService {
         long bookedRequests = maintenanceRequestRepository.countByGarageIdAndScheduledDate(garage.getId(), request.getScheduledDate());
 
         if (bookedRequests >= garage.getCapacity()) {
-            throw new IllegalArgumentException("No available slots in the garage for the selected date.");
+            throw new IllegalArgumentException("Every slot is reserved at that time!");
         }
         request.setGarage(garage);
         request.setCar(car);

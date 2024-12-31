@@ -59,11 +59,11 @@ public class CarService {
             );
             updatedCar.setGarages(garages);
         }
+        updatedCar.setId(car.getId());
+        updatedCar.setLicensePlate(car.getLicensePlate());
         updatedCar.setMake(car.getMake());
         updatedCar.setModel(car.getModel());
-        updatedCar.setLicensePlate(car.getLicensePlate());
         updatedCar.setProductionYear(car.getProductionYear());
-        updatedCar.setId(car.getId());
         return  carRepository.save(updatedCar);
     }
 

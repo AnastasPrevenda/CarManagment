@@ -32,23 +32,6 @@ public class MaintenanceRequest {
         this.id = id;
     }
 
-    public String getScheduledDate() {
-        return scheduledDate;
-    }
-
-    public void setScheduledDate(String scheduledDate) {
-        this.scheduledDate = scheduledDate;
-    }
-
-    public String getServiceType() {
-        return serviceType;
-    }
-
-    public void setServiceType(String serviceType) {
-        this.serviceType = serviceType;
-    }
-
-
     public Car getCar() {
         return car;
     }
@@ -57,11 +40,27 @@ public class MaintenanceRequest {
         this.car = car;
     }
 
+    public String getScheduledDate() {
+        return scheduledDate;
+    }
+
+    public void setScheduledDate(String scheduledDate) {
+        this.scheduledDate = scheduledDate;
+    }
+
     public Garage getGarage() {
         return garage;
     }
 
     public void setGarage(Garage garage) {
         this.garage = garage;
+    }
+
+    public String getServiceType() {
+        return serviceType;
+    }
+
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
     }
 }

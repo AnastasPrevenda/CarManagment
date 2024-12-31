@@ -23,8 +23,8 @@ public class GarageController {
 
     }
     @GetMapping("/{id}")
-    public ResponseEntity<Garage> getGarageById(@PathVariable Long id) {
-        return new ResponseEntity<>(garageService.getGarageById(id),HttpStatus.OK) ;
+    public ResponseEntity<Garage> getGarageId(@PathVariable Long id) {
+        return new ResponseEntity<>(garageService.getGarageId(id),HttpStatus.OK) ;
     }
 
     @PostMapping
@@ -41,9 +41,9 @@ public class GarageController {
     public ResponseEntity<String> updateGarage(@PathVariable Long id, @RequestBody Garage garage) {
         try {
             garageService.updateGarage(id, garage);
-            return new ResponseEntity<>("The garage is updated", HttpStatus.OK);
+            return new ResponseEntity<>("Garage Updated", HttpStatus.OK);
         }catch (Exception e){
-            return new ResponseEntity<>("The garage is not updated", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Garage not updated", HttpStatus.BAD_REQUEST);
         }
 
     }
@@ -53,9 +53,9 @@ public class GarageController {
 
         try {
             garageService.deleteGarage(id);
-            return new ResponseEntity<>("The garage is deleted", HttpStatus.OK);
+            return new ResponseEntity<>("Garage deleted", HttpStatus.OK);
         }catch (Exception e){
-            return new ResponseEntity<>("The garage is not deleted", HttpStatus.BAD_REQUEST);
+            return new ResponseEntity<>("Garage not deleted", HttpStatus.BAD_REQUEST);
         }
     }
 }

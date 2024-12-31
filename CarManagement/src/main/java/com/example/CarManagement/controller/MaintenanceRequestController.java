@@ -25,7 +25,7 @@ public class MaintenanceRequestController {
         return maintenanceRequestService.getAllRequests(carId, garageId, startDate, endDate);
     }
     @GetMapping("/{id}")
-    public ResponseEntity<MaintenanceRequest> getRequestById(@PathVariable Long id) {
+    public ResponseEntity<MaintenanceRequest> getRequestId(@PathVariable Long id) {
     return  new ResponseEntity<>(maintenanceRequestService.getMaintenanceRequestById(id), HttpStatus.OK);
     }
     @PostMapping

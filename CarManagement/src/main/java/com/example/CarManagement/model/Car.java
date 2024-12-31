@@ -41,14 +41,13 @@ public class Car {
         this.id = id;
     }
 
-    public String getMake() {
-        return make;
+    public String getLicensePlate() {
+        return licensePlate;
     }
 
-    public void setMake(String make) {
-        this.make = make;
+    public void setLicensePlate(String licensePlate) {
+        this.licensePlate = licensePlate;
     }
-
     public String getModel() {
         return model;
     }
@@ -57,20 +56,12 @@ public class Car {
         this.model = model;
     }
 
-    public int getProductionYear() {
-        return productionYear;
+    public String getMake() {
+        return make;
     }
 
-    public void setProductionYear(int productionYear) {
-        this.productionYear = productionYear;
-    }
-
-    public String getLicensePlate() {
-        return licensePlate;
-    }
-
-    public void setLicensePlate(String licensePlate) {
-        this.licensePlate = licensePlate;
+    public void setMake(String make) {
+        this.make = make;
     }
 
     public List<Garage> getGarages() {
@@ -79,5 +70,12 @@ public class Car {
 
     public void setGarages(List<Garage> garages) {
         this.garages = garages;
+    }
+    public int getProductionYear() {
+        return productionYear;
+    }
+
+    public void setProductionYear(int productionYear) {
+        this.productionYear = productionYear;
     }
 }

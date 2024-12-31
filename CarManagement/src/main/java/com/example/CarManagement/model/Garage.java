@@ -13,9 +13,9 @@ public class Garage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false)
-    private String name;
-    @Column(nullable = false)
     private String location;
+    @Column(nullable = false)
+    private String name;
     @Column(nullable = false)
     private String city;
     private int capacity;
@@ -30,20 +30,20 @@ public class Garage {
         this.id = id;
     }
 
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
     }
 
     public String getCity() {
@@ -54,12 +54,12 @@ public class Garage {
         this.city = city;
     }
 
-    public int getCapacity() {
-        return capacity;
+    public String getLocation() {
+        return location;
     }
 
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     public List<MaintenanceRequest> getMaintenanceRequests() {

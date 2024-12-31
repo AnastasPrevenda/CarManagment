@@ -28,9 +28,9 @@ public class CarController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Car> getCarById(@PathVariable Long id){
+    public ResponseEntity<Car> getCarId(@PathVariable Long id){
         try {
-            return new ResponseEntity<>(carService.getCarById(id),HttpStatus.OK);
+            return new ResponseEntity<>(carService.getCarId(id),HttpStatus.OK);
         }catch (Exception e){
             return new ResponseEntity<>(null, HttpStatus.BAD_REQUEST);
         }

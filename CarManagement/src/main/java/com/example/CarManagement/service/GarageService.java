@@ -39,8 +39,8 @@ public class GarageService {
       Garage updatedGarage=garageRepository.findById(id).orElseThrow();
 
       updatedGarage.setId(garage.getId());
+        updatedGarage.setName(garage.getName());
       updatedGarage.setCity(garage.getCity());
-      updatedGarage.setName(garage.getName());
       updatedGarage.setLocation(garage.getLocation());
       updatedGarage.setCapacity(garage.getCapacity());
 
